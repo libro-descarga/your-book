@@ -1,119 +1,184 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <title>Descarga tu Libro en PDF</title>
-    <style>
-        body {
-            margin: 0;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(135deg, #007acc, #00bcd4);
-            color: white;
-            text-align: center;
-        }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Your Book</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f2f5ff;
+      color: #000;
+    }
 
-        .container {
-            padding: 100px 20px 60px;
-        }
+    header {
+      background: white;
+      padding: 20px 50px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 1px 5px rgba(0,0,0,0.1);
+    }
 
-        h1 {
-            font-size: 42px;
-            margin-bottom: 20px;
-        }
+    header nav a {
+      margin: 0 15px;
+      text-decoration: none;
+      color: #000;
+    }
 
-        p {
-            font-size: 20px;
-            max-width: 600px;
-            margin: 0 auto 40px;
-        }
+    .hero {
+      text-align: center;
+      padding: 60px 20px;
+    }
 
-        .download-btn {
-            background-color: #ffcc00;
-            color: #333;
-            font-weight: bold;
-            padding: 15px 30px;
-            text-decoration: none;
-            font-size: 18px;
-            border-radius: 8px;
-            transition: background-color 0.3s ease;
-        }
+    .hero h1 {
+      font-size: 36px;
+      margin-bottom: 20px;
+    }
 
-        .download-btn:hover {
-            background-color: #e6b800;
-        }
+    .download-box {
+      background: white;
+      width: 60%;
+      margin: auto;
+      border: 2px dashed #ccc;
+      padding: 50px 20px;
+      border-radius: 10px;
+    }
 
-        .contact {
-            background-color: white;
-            color: #333;
-            padding: 40px 20px;
-            margin-top: 60px;
-            border-top-left-radius: 30px;
-            border-top-right-radius: 30px;
-        }
+    .download-box button {
+      background-color: #41d65e;
+      color: white;
+      padding: 15px 30px;
+      font-size: 16px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+    }
 
-        .contact h2 {
-            margin-bottom: 20px;
-        }
+    .features {
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      margin-top: 30px;
+    }
 
-        form {
-            max-width: 500px;
-            margin: 0 auto;
-        }
+    .feature {
+      text-align: center;
+    }
 
-        input, textarea {
-            width: 100%;
-            padding: 12px;
-            margin-bottom: 15px;
-            border: 1px solid #ccc;
-            border-radius: 6px;
-            font-size: 16px;
-        }
+    .steps {
+      text-align: center;
+      padding: 50px 20px;
+    }
 
-        button {
-            background-color: #007acc;
-            color: white;
-            border: none;
-            padding: 12px 25px;
-            font-size: 16px;
-            border-radius: 6px;
-            cursor: pointer;
-        }
+    .step-grid {
+      display: flex;
+      justify-content: center;
+      gap: 50px;
+      margin-top: 30px;
+    }
 
-        button:hover {
-            background-color: #005f99;
-        }
+    .step {
+      background: white;
+      padding: 30px;
+      border-radius: 10px;
+      width: 200px;
+    }
 
-        footer {
-            background-color: #003d66;
-            color: #ccc;
-            padding: 20px;
-            font-size: 14px;
-        }
-    </style>
+    .contact, .comments {
+      padding: 50px 20px;
+      background: white;
+      margin: 30px auto;
+      width: 80%;
+      border-radius: 10px;
+    }
+
+    input, textarea {
+      width: 100%;
+      padding: 10px;
+      margin-top: 10px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+    }
+
+    .submit-btn {
+      margin-top: 15px;
+      background-color: #41d65e;
+      color: white;
+      padding: 10px 25px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+  </style>
 </head>
 <body>
 
-    <div class="container">
-        <h1>📘 ¡Descarga tu libro!</h1>
-        <p>Accede al contenido completo del libro en formato PDF con un solo clic. ¡Fácil, rápido y gratuito!</p>
-        <!-- Asegúrate de que el archivo PDF se llame 'libro.pdf' y esté en la raíz del repositorio -->
-        <a class="download-btn" href="libro.pdf" download>📥 Descargar Libro</a>
+  <header>
+    <div><strong>MiLibroGratis</strong></div>
+    <nav>
+      <a href="#como">¿Cómo funciona?</a>
+      <a href="#contacto">Contacto</a>
+      <a href="#comentarios">Comentarios</a>
+      <a href="#">Iniciar sesión</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h1>Descarga tu libro favorito</h1>
+    <div class="download-box">
+      <p><strong>Haz clic abajo para descargar el libro</strong></p>
+      <button onclick="descargarLibro()">📘 Descargar PDF</button>
+      <p style="margin-top:10px; font-size: 12px;">(Solo disponible si has iniciado sesión)</p>
     </div>
 
-    <div class="contact">
-        <h2>📩 Contáctanos</h2>
-        <form action="#" method="post">
-            <input type="text" name="nombre" placeholder="Tu nombre" required>
-            <input type="email" name="email" placeholder="Tu correo electrónico" required>
-            <textarea name="mensaje" rows="5" placeholder="Escribe tu mensaje..." required></textarea>
-            <button type="submit">Enviar mensaje</button>
-        </form>
+    <div class="features">
+      <div class="feature">✅ Fácil</div>
+      <div class="feature">⚡ Rápido</div>
+      <div class="feature">🔒 Seguro</div>
     </div>
+  </section>
 
-    <footer>
-        © 2025 Your Book | Todos los derechos reservados
-    </footer>
+  <section class="steps" id="como">
+    <h2>¿Cómo funciona?</h2>
+    <div class="step-grid">
+      <div class="step">
+        <h3>1</h3>
+        <p>Registrarse o iniciar sesión</p>
+      </div>
+      <div class="step">
+        <h3>2</h3>
+        <p>Haz clic en descargar</p>
+      </div>
+      <div class="step">
+        <h3>3</h3>
+        <p>Disfruta tu libro en PDF</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="comments" id="comentarios">
+    <h2>Comentarios</h2>
+    <textarea placeholder="Escribe tu comentario..."></textarea>
+    <button class="submit-btn">Enviar</button>
+  </section>
+
+  <section class="contact" id="contacto">
+    <h2>Contacto</h2>
+    <input type="text" placeholder="Tu nombre">
+    <input type="email" placeholder="Tu correo">
+    <textarea placeholder="Tu mensaje..."></textarea>
+    <button class="submit-btn">Enviar mensaje</button>
+  </section>
+
+  <script>
+    function descargarLibro() {
+      alert("Debes iniciar sesión para descargar el libro.");
+      // Aquí iría la lógica para verificar el login y redirigir al PDF
+      // window.location.href = "libro.pdf";
+    }
+  </script>
 
 </body>
 </html>
-
