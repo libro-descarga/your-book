@@ -1,184 +1,158 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Your Book</title>
+  <meta charset="UTF-8">
+  <title>Your Book - Free Book Download</title>
   <style>
     body {
       margin: 0;
       font-family: Arial, sans-serif;
-      background-color: #f2f5ff;
-      color: #000;
+      background-color: #fdf6e3; /* crema claro */
+      background-image: url('foto libro');
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center top;
     }
 
     header {
-      background: white;
-      padding: 20px 50px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      box-shadow: 0 1px 5px rgba(0,0,0,0.1);
-    }
-
-    header nav a {
-      margin: 0 15px;
-      text-decoration: none;
-      color: #000;
-    }
-
-    .hero {
+      background-color: rgba(255, 255, 255, 0.95);
+      padding: 20px;
       text-align: center;
-      padding: 60px 20px;
+      font-size: 30px;
+      font-weight: bold;
+      color: #333;
     }
 
-    .hero h1 {
-      font-size: 36px;
-      margin-bottom: 20px;
+    .section {
+      padding: 40px;
+      background-color: rgba(255, 255, 255, 0.85);
+      margin: 20px auto;
+      max-width: 800px;
+      border-radius: 12px;
     }
 
-    .download-box {
-      background: white;
-      width: 60%;
-      margin: auto;
-      border: 2px dashed #ccc;
-      padding: 50px 20px;
-      border-radius: 10px;
-    }
-
-    .download-box button {
-      background-color: #41d65e;
+    .download-button {
+      background-color: #4CAF50;
       color: white;
+      border: none;
       padding: 15px 30px;
       font-size: 16px;
-      border: none;
+      cursor: pointer;
       border-radius: 8px;
-      cursor: pointer;
+      margin-top: 20px;
     }
 
-    .features {
-      display: flex;
-      justify-content: center;
-      gap: 40px;
-      margin-top: 30px;
+    .comments {
+      margin-top: 40px;
     }
 
-    .feature {
-      text-align: center;
-    }
-
-    .steps {
-      text-align: center;
-      padding: 50px 20px;
-    }
-
-    .step-grid {
-      display: flex;
-      justify-content: center;
-      gap: 50px;
-      margin-top: 30px;
-    }
-
-    .step {
-      background: white;
-      padding: 30px;
-      border-radius: 10px;
-      width: 200px;
-    }
-
-    .contact, .comments {
-      padding: 50px 20px;
-      background: white;
-      margin: 30px auto;
-      width: 80%;
-      border-radius: 10px;
-    }
-
-    input, textarea {
-      width: 100%;
-      padding: 10px;
-      margin-top: 10px;
-      border: 1px solid #ccc;
+    .comment {
+      background-color: #fff;
+      border-left: 5px solid #4CAF50;
+      padding: 15px;
+      margin-bottom: 15px;
       border-radius: 6px;
     }
 
-    .submit-btn {
-      margin-top: 15px;
-      background-color: #41d65e;
+    .faq, form {
+      margin-top: 40px;
+    }
+
+    footer {
+      background-color: #222;
       color: white;
-      padding: 10px 25px;
-      border: none;
-      border-radius: 6px;
-      cursor: pointer;
+      padding: 40px;
+      text-align: center;
+    }
+
+    footer p {
+      margin: 10px 0;
+    }
+
+    footer .small {
+      font-size: 14px;
+      color: #ccc;
     }
   </style>
 </head>
 <body>
 
-  <header>
-    <div><strong>MiLibroGratis</strong></div>
-    <nav>
-      <a href="#como">¿Cómo funciona?</a>
-      <a href="#contacto">Contacto</a>
-      <a href="#comentarios">Comentarios</a>
-      <a href="#">Iniciar sesión</a>
-    </nav>
-  </header>
+<header>
+  Your Book - Free Downloads
+</header>
 
-  <section class="hero">
-    <h1>Descarga tu libro favorito</h1>
-    <div class="download-box">
-      <p><strong>Haz clic abajo para descargar el libro</strong></p>
-      <button onclick="descargarLibro()">📘 Descargar PDF</button>
-      <p style="margin-top:10px; font-size: 12px;">(Solo disponible si has iniciado sesión)</p>
-    </div>
+<div class="section">
+  <h2>Explore Our Free Book Collection</h2>
+  <p>Click the button below to download your favorite book!</p>
+  <button class="download-button" onclick="alert('Download started!')">Download Book</button>
+</div>
 
-    <div class="features">
-      <div class="feature">✅ Fácil</div>
-      <div class="feature">⚡ Rápido</div>
-      <div class="feature">🔒 Seguro</div>
-    </div>
-  </section>
+<div class="section comments">
+  <h2>What People Say</h2>
 
-  <section class="steps" id="como">
-    <h2>¿Cómo funciona?</h2>
-    <div class="step-grid">
-      <div class="step">
-        <h3>1</h3>
-        <p>Registrarse o iniciar sesión</p>
-      </div>
-      <div class="step">
-        <h3>2</h3>
-        <p>Haz clic en descargar</p>
-      </div>
-      <div class="step">
-        <h3>3</h3>
-        <p>Disfruta tu libro en PDF</p>
-      </div>
-    </div>
-  </section>
+  <div class="comment">
+    <strong>Juan (España):</strong> ¡Excelente página! Me encantó poder descargar mi libro favorito gratis.
+  </div>
 
-  <section class="comments" id="comentarios">
-    <h2>Comentarios</h2>
-    <textarea placeholder="Escribe tu comentario..."></textarea>
-    <button class="submit-btn">Enviar</button>
-  </section>
+  <div class="comment">
+    <strong>Sarah (UK):</strong> Very useful and simple. Thank you for the free access!
+  </div>
 
-  <section class="contact" id="contacto">
-    <h2>Contacto</h2>
-    <input type="text" placeholder="Tu nombre">
-    <input type="email" placeholder="Tu correo">
-    <textarea placeholder="Tu mensaje..."></textarea>
-    <button class="submit-btn">Enviar mensaje</button>
-  </section>
+  <div class="comment">
+    <strong>Carlos (México):</strong> Todo fue fácil y rápido. Muy recomendable.
+  </div>
+</div>
 
-  <script>
-    function descargarLibro() {
-      alert("Debes iniciar sesión para descargar el libro.");
-      // Aquí iría la lógica para verificar el login y redirigir al PDF
-      // window.location.href = "libro.pdf";
-    }
-  </script>
+<div class="section faq">
+  <h2>Frequently Asked Questions</h2>
+
+  <h4>📖 What is this book about?</h4>
+  <p>Each book has a short description under the title so you can know before downloading.</p>
+
+  <h4>🔐 Is it safe to download?</h4>
+  <p>Yes. All files are scanned and safe to use.</p>
+
+  <h4>💬 Can I leave a comment?</h4>
+  <p>Of course! Comments help others know what's good.</p>
+
+  <h4>📥 How to download?</h4>
+  <p>Just click the green button and the download will start.</p>
+</div>
+
+<div class="section faq">
+  <h2>Contact Us</h2>
+  <form id="contactForm">
+    <label>Name:</label><br>
+    <input type="text" name="name" required style="width: 100%; padding: 10px;"><br><br>
+
+    <label>Email:</label><br>
+    <input type="email" name="email" required style="width: 100%; padding: 10px;"><br><br>
+
+    <label>Message:</label><br>
+    <textarea name="message" required style="width: 100%; height: 100px; padding: 10px;"></textarea><br><br>
+
+    <button type="submit" class="download-button">Send Message</button>
+  </form>
+
+  <p id="confirmation" style="color: green; font-weight: bold; display: none; margin-top: 20px;">
+    ✅ Message sent successfully!
+  </p>
+</div>
+
+<footer>
+  <p>📧 contact@yourbook.com | 💬 Live Chat Available</p>
+  <p>💰 Price: <strong style="color: lightgreen;">Gratis</strong></p>
+  <p class="small">© 2025 Your Book. All rights reserved.</p>
+</footer>
+
+<script>
+  // Confirmación de mensaje enviado
+  document.getElementById("contactForm").addEventListener("submit", function(event) {
+    event.preventDefault();
+    document.getElementById("confirmation").style.display = "block";
+    this.reset();
+  });
+</script>
 
 </body>
 </html>
