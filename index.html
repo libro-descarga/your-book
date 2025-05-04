@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Descarga tu Libro en PDF</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #007acc, #00bcd4);
+            color: white;
+            text-align: center;
+        }
+
+        .container {
+            padding: 100px 20px 60px;
+        }
+
+        h1 {
+            font-size: 42px;
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 20px;
+            max-width: 600px;
+            margin: 0 auto 40px;
+        }
+
+        .download-btn {
+            background-color: #ffcc00;
+            color: #333;
+            font-weight: bold;
+            padding: 15px 30px;
+            text-decoration: none;
+            font-size: 18px;
+            border-radius: 8px;
+            transition: background-color 0.3s ease;
+        }
+
+        .download-btn:hover {
+            background-color: #e6b800;
+        }
+
+        .contact {
+            background-color: white;
+            color: #333;
+            padding: 40px 20px;
+            margin-top: 60px;
+            border-top-left-radius: 30px;
+            border-top-right-radius: 30px;
+        }
+
+        .contact h2 {
+            margin-bottom: 20px;
+        }
+
+        form {
+            max-width: 500px;
+            margin: 0 auto;
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            font-size: 16px;
+        }
+
+        button {
+            background-color: #007acc;
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            font-size: 16px;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #005f99;
+        }
+
+        footer {
+            background-color: #003d66;
+            color: #ccc;
+            padding: 20px;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>📘 ¡Descarga tu libro!</h1>
+        <p>Accede al contenido completo del libro en formato PDF con un solo clic. ¡Fácil, rápido y gratuito!</p>
+        <!-- Asegúrate de que el archivo PDF se llame 'libro.pdf' y esté en la raíz del repositorio -->
+        <a class="download-btn" href="libro.pdf" download>📥 Descargar Libro</a>
+    </div>
+
+    <div class="contact">
+        <h2>📩 Contáctanos</h2>
+        <form action="#" method="post">
+            <input type="text" name="nombre" placeholder="Tu nombre" required>
+            <input type="email" name="email" placeholder="Tu correo electrónico" required>
+            <textarea name="mensaje" rows="5" placeholder="Escribe tu mensaje..." required></textarea>
+            <button type="submit">Enviar mensaje</button>
+        </form>
+    </div>
+
+    <footer>
+        © 2025 Your Book | Todos los derechos reservados
+    </footer>
+
+</body>
+</html>
+
